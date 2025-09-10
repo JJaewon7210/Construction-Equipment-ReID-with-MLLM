@@ -198,10 +198,10 @@ Tracking validation was conducted on Busan_01 (Scene A) and Busan_02 (Scene B) c
 Watch our system in action with the best-performing configuration (BoostTrack + EquipReID + MLLM):
 
 #### 📹 Scene A - Busan_01
-[![Scene A Demo](https://img.shields.io/badge/🎬-Watch%20Demo%20Video-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/1gAUgau_CAmUZoLGne3cwbRWy_ViQk7xd/view?usp=drive_link)
+[![Scene A Demo](https://img.shields.io/badge/🎬-Watch%20Demo%20Video-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/11r2qCkfNfW13_43Kafg8gvp8X9Vyk4_q/view?usp=drive_link)
 
 #### 📹 Scene B - Busan_02  
-[![Scene B Demo](https://img.shields.io/badge/🎬-Watch%20Demo%20Video-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/12ZQmxNDeHPtX3Va9OxoRgs1UEnm3v4Uz/view?usp=drive_link)
+[![Scene B Demo](https://img.shields.io/badge/🎬-Watch%20Demo%20Video-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/17rKn1kSR_mbdDfoIfWNDOk7GhmIov_zy/view?usp=drive_link)
 
 > **Note**: These videos demonstrate the complete pipeline including detection, tracking, re-identification, and MLLM-based adjudication on real construction site footage.
 
