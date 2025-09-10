@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project-specific folders (ignore contents but keep folders)
+data/*
+detections/*
+tracked_outputs/*
+trackeval_workspace/*
+weights/*
+
+# Keep folder structure by not ignoring the folders themselves
+!data/.gitkeep
+!detections/.gitkeep
+!tracked_outputs/.gitkeep
+!trackeval_workspace/.gitkeep
+!weights/.gitkeep
+
+# Temporary files
+*.tmp
+*_temp*
+image_list_temp_*.txt
+
+# Log files
+*.log
+
+# API keys and secrets
+.openai_key
+*.key

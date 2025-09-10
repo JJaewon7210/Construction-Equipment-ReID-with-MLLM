@@ -1,0 +1,4 @@
+# This file ensures the weights/ directory structure is preserved in git
+# Place your model weights here:
+# - YOLO11 weights (mocs_acid_y11m, mocs_acid_y11s)
+# - ReID weights (osnet_x0_75_*.pt files)
