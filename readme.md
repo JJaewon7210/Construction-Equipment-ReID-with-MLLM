@@ -1,4 +1,3 @@
-
 # Construction Equipment Re-ID with MLLM
 
 A comprehensive computer vision pipeline for construction equipment detection, tracking, and re-identification using Multi-modal Large Language Models (MLLM). This system combines YOLO object detection, multi-object tracking, and GPT-based adjudication for robust construction equipment monitoring.
@@ -24,17 +23,36 @@ This project implements an end-to-end pipeline for:
 
 ```
 Construction-Equipment-ReID-with-MLLM/
-├── c001_detect.py          # Object detection pipeline
-├── c001_validate.py        # Detection validation
-├── c002_track.py           # Multi-object tracking
-├── c003_gpt_adjudicator.py # GPT-based track adjudication
-├── c003_postprocess.py     # Post-processing pipeline
-├── c003_validate.py        # Tracking validation
-├── data/                   # Input datasets
-├── detections/             # Detection results
-├── tracked_outputs/        # Tracking results
-├── trackeval_workspace/    # Evaluation workspace
-└── weights/                # Model weights
+├── c001_detect.py              # Script for object detection using YOLO11
+├── c001_validate.py            # Script for validating detection results
+├── c002_track.py               # Multi-object tracking pipeline (BoostTrack, BotSort, StrongSort, DeepOcSort)
+├── c003_gpt_adjudicator.py     # GPT-based adjudication
+├── c003_postprocess.py         # Script for post-processing track results
+├── c003_validate.py            # Script for validating tracking results and generating metrics
+├── data/                       # Input datasets (images, labels, etc.)
+│   ├── Busan_01/               # Example dataset folder
+│   │   ├── images/             # Input images
+│   │   └── labels/             # Ground truth label files
+│   └── Busan_02/               # Another dataset folder
+├── detections/                 # Detection result files (per-frame text outputs)
+│   └── Busan_01/               # Detection results for Busan_01
+│       ├── frame_000000.txt    # Detection result for frame 0
+│       ├── frame_000001.txt    # Detection result for frame 1
+│       └── ...                 # More frame-wise detection files
+├── tracked_outputs/            # Tracking result files (per-frame and per-sequence outputs)
+│   └── Busan_01/               # Tracking results for Busan_01
+│       ├── track_000000.txt    # Tracking result for frame 0
+│       └── ...                 # More tracking files
+├── trackeval_workspace/        # Workspace for evaluation scripts and metrics
+│   └── Busan_01/               # Evaluation results and temporary files
+├── weights/                    # Model weights for YOLO11 and OSNet ReID (downloaded models)
+│   ├── osnet_x0_75_AIHUB.pt    # ReID model weight
+│   ├── osnet_x0_75_AIHUB+YOUTUBE+VeRI.pt
+│   ├── osnet_x0_75_VeRI.pt
+│   ├── osnet_x0_75_YOUTUBE.pt
+│   ├── mocs_acid_y11m/         # YOLO11 model weights (+pump +worker)
+│   └── mocs_acid_y11s/         # YOLO11 model weights (+pump +worker)
+└── __pycache__/                # Python cache files
 ```
 
 ## Requirements
