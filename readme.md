@@ -70,22 +70,22 @@ export OPENAI_API_KEY="your-api-key-here"
 ### Case Study Dataset
 Download the construction equipment images and labels:
 
-- **Busan_01**: https://drive.google.com/file/d/16d8NEIsFLlb3EyOLh9mHtEnOEZt5Ybnc/view?usp=drive_link
-- **Busan_02**: https://drive.google.com/file/d/1WmolxsDBFZepX4MA7sjc5duyOir0hFPI/view?usp=drive_link
+- **Busan_01**: [📁 Download Dataset](https://drive.google.com/file/d/16d8NEIsFLlb3EyOLh9mHtEnOEZt5Ybnc/view?usp=drive_link)
+- **Busan_02**: [📁 Download Dataset](https://drive.google.com/file/d/1WmolxsDBFZepX4MA7sjc5duyOir0hFPI/view?usp=drive_link)
 
 Place the downloaded data in the `data/` directory.
 
 ### Model Weights
 
 #### YOLO11 Detection Weights
-- **mocs_acid_y11m (+pump +worker)**: https://drive.google.com/file/d/1JjMTWO1shp9_RDTyWdPTQnWmZti62KIu/view?usp=drive_link
-- **mocs_acid_y11s (+pump +worker)**: https://drive.google.com/file/d/1By5iBjVLr4GJcSlQqIRXcD1XLXxaMlbq/view?usp=drive_link
+- **mocs_acid_y11m (+pump +worker)**: [🤖 Download Model](https://drive.google.com/file/d/1JjMTWO1shp9_RDTyWdPTQnWmZti62KIu/view?usp=drive_link)
+- **mocs_acid_y11s (+pump +worker)**: [🤖 Download Model](https://drive.google.com/file/d/1By5iBjVLr4GJcSlQqIRXcD1XLXxaMlbq/view?usp=drive_link)
 
 #### Re-ID Model Weights
-- **osnet_x0_75_AIHUB.pt**: https://drive.google.com/file/d/1oq8oiOh76lGgswldDwWva2Z4DSPRgFkI/view?usp=drive_link
-- **osnet_x0_75_AIHUB+YOUTUBE+VeRI.pt**: https://drive.google.com/file/d/1Bxp50riU59hxSIM6sLfqz4Ik66SSNFtf/view?usp=drive_link
-- **osnet_x0_75_VeRI.pt**: https://drive.google.com/file/d/1VJTlVuM_pA-FR2U4XqV44UmpmeKcnwgH/view?usp=drive_link
-- **osnet_x0_75_YOUTUBE.pt**: https://drive.google.com/file/d/1dIGHJMnG4wl4kblg3haI1P0NxEfkkRT9/view?usp=drive_link
+- **osnet_x0_75_AIHUB.pt**: [🔗 Download ReID Model](https://drive.google.com/file/d/1oq8oiOh76lGgswldDwWva2Z4DSPRgFkI/view?usp=drive_link)
+- **osnet_x0_75_AIHUB+YOUTUBE+VeRI.pt**: [🔗 Download ReID Model](https://drive.google.com/file/d/1Bxp50riU59hxSIM6sLfqz4Ik66SSNFtf/view?usp=drive_link)
+- **osnet_x0_75_VeRI.pt**: [🔗 Download ReID Model](https://drive.google.com/file/d/1VJTlVuM_pA-FR2U4XqV44UmpmeKcnwgH/view?usp=drive_link)
+- **osnet_x0_75_YOUTUBE.pt**: [🔗 Download ReID Model](https://drive.google.com/file/d/1dIGHJMnG4wl4kblg3haI1P0NxEfkkRT9/view?usp=drive_link)
 
 Place all weights in the `weights/` directory.
 
@@ -151,23 +151,11 @@ Our system demonstrates state-of-the-art performance across detection and tracki
 
 The YOLO11 models were validated on ACID and MOCS datasets, showing excellent precision and recall for construction equipment detection:
 
-#### YOLO11m Detection Results
-| Metric | Value | Description |
-|--------|--------|-------------|
-| **Training Time** | 69,250.2s | Total training duration |
-| **Precision** | 0.919 | Detection precision |
-| **Recall** | 0.852 | Detection recall |
-| **mAP50** | 0.912 | Mean Average Precision at IoU=0.5 |
-| **mAP50-95** | 0.811 | Mean Average Precision at IoU=0.5:0.95 |
-
-#### YOLO11s Detection Results
-| Metric | Value | Description |
-|--------|--------|-------------|
-| **Training Time** | 42,988.2s | Total training duration |
-| **Precision** | 0.927 | Detection precision |
-| **Recall** | 0.821 | Detection recall |
-| **mAP50** | 0.901 | Mean Average Precision at IoU=0.5 |
-| **mAP50-95** | 0.792 | Mean Average Precision at IoU=0.5:0.95 |
+#### YOLO11 Detection Results
+| Model | Precision | Recall | mAP50 | mAP50-95 |
+|--------|--------|--------|--------|--------|
+| YOLO11m | 0.919 | 0.852 | 0.912 | 0.811 |
+| YOLO11s | 0.927 | 0.821 | 0.901 | 0.792 |
 
 ### Tracking Performance
 
@@ -204,6 +192,18 @@ Tracking validation was conducted on Busan_01 (Scene A) and Busan_02 (Scene B) c
 | B | StrongSort | YouTube | 0.555 | 0.544 | 0.550 | 56 | 0.595 |
 | B | StrongSort | VeRI | 0.571 | 0.560 | 0.566 | 53 | 0.601 |
 | B | StrongSort | **EquipReID (Combined)** | 0.564 | 0.554 | 0.559 | 54 | 0.602 |
+
+### 🎥 Demo Videos
+
+Watch our system in action with the best-performing configuration (BoostTrack + EquipReID + MLLM):
+
+#### 📹 Scene A - Busan_01
+[![Scene A Demo](https://img.shields.io/badge/🎬-Watch%20Demo%20Video-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/1gAUgau_CAmUZoLGne3cwbRWy_ViQk7xd/view?usp=drive_link)
+
+#### 📹 Scene B - Busan_02  
+[![Scene B Demo](https://img.shields.io/badge/🎬-Watch%20Demo%20Video-red?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/12ZQmxNDeHPtX3Va9OxoRgs1UEnm3v4Uz/view?usp=drive_link)
+
+> **Note**: These videos demonstrate the complete pipeline including detection, tracking, re-identification, and MLLM-based adjudication on real construction site footage.
 
 ## Citation
 
